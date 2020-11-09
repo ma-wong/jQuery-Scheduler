@@ -51,14 +51,18 @@ function renderEvents() {
         $('#five-pm').text(savedEvents.five);
     }
     
-}
+};
 
 renderEvents();
 
 // Clear events from scheduler
 
-$('.clear-btn').click(function() {
-    
-})
+// $('.clear-btn').click(function() {
+
+// })
+
+
+
+
 
 
