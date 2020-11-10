@@ -87,6 +87,7 @@ function hourToId(hour) {
     }
 
 }
+
 var hours = [9, 10, 11, 12, 13, 14, 15, 16, 17]
 for (elem of hours) {
     var dom = $(hourToId(elem));
