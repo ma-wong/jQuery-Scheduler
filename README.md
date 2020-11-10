@@ -23,7 +23,7 @@ Where the current date and time is displayed
 ![Event box](Assets/example-event.png)
 Example event box with time slot on the left
 
-![Save button](Assets/example-event.png)
+![Save button](Assets/save-button.png)
 Save button used to store events in local storage
 
 [Link to Scheduler Page](https://ma-wong.github.io/jQuery-Scheduler/)
