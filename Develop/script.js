@@ -57,157 +57,52 @@ function renderEvents() {
 
 renderEvents();
 
-// Clear events from scheduler
+function hourToId(hour) {
+    if (hour === 9) {
+        return '#nine-am';
+    }
+    if (hour === 10) {
+        return '#ten-am';
+    }
+    if (hour === 11) {
+        return '#eleven-am';
+    }
+    if (hour === 12) {
+        return '#twelve-pm';
+    }
+    if (hour === 13) {
+        return '#one-pm';
+    }
+    if (hour === 14) {
+        return '#two-pm';
+    }
+    if (hour === 15) {
+        return '#three-pm';
+    }
+    if (hour === 16) {
+        return '#four-pm';
+    }
+    if (hour === 17) {
+        return '#five-pm';
+    }
 
-// $('.clear-btn').click(function() {
-//     var timeSlot = $(this).attr('value');
-
-// })
-
-// var hours = [9, 10, 11, 12, 13, 14, 15, 16, 17]
-// for (elem of hours) {
-//     if (currentTime === elem) {
-//         $('.form-control').css('background-color', 'red');
-//         console.log('current time');
-//     }
-//     else if (currentTime > elem) {
-//         $('.form-control').css('background-color', 'grey');
-//         console.log('already passed');
-//     }
-//     else if (currentTime < elem) {
-//         $('.form-control').css('background-color', 'green');
-//         console.log('coming up');
-//     }
-// }
-
-// function checkCurrentTime()
-
-
-// if (currentTime.isBetween(moment({hour: 14}), moment({hour: 15}))) {
-//     $('.form-control').css('background-color', 'red');
-//     console.log('hello');
-// }
-
-function checkCurrentTime() {
-    // 9am
-    if (currentTime === 9) {
-        $('#nine-am').css('background-color', 'lightcoral');
+}
+var hours = [9, 10, 11, 12, 13, 14, 15, 16, 17]
+for (elem of hours) {
+    var dom = $(hourToId(elem));
+    if (currentTime === elem) {
+        dom.css('background-color', 'lightcoral');
         console.log('current time');
     }
-    else if (currentTime > 9) {
-        $('#nine-am').css('background-color', 'grey');
+    else if (currentTime > elem) {
+        dom.css('background-color', 'grey');
         console.log('already passed');
     }
-    else if (currentTime < 9) {
-        $('#nine-am').css('background-color', 'lightgreen');
-        console.log('coming up');
-    }
-    // 10am
-    if (currentTime === 10) {
-        $('#ten-am').css('background-color', 'lightcoral');
-        console.log('current time');
-    }
-    else if (currentTime > 10) {
-        $('#ten-am').css('background-color', 'grey');
-        console.log('already passed');
-    }
-    else if (currentTime < 10) {
-        $('#ten-am').css('background-color', 'lightgreen');
-        console.log('coming up');
-    }
-    // 11am
-    if (currentTime === 11) {
-        $('#eleven-am').css('background-color', 'lightcoral');
-        console.log('current time');
-    }
-    else if (currentTime > 11) {
-        $('#eleven-am').css('background-color', 'grey');
-        console.log('already passed');
-    }
-    else if (currentTime < 11) {
-        $('#eleven-am').css('background-color', 'lightgreen');
-        console.log('coming up');
-    }
-    // 12pm
-    if (currentTime === 12) {
-        $('#twelve-pm').css('background-color', 'lightcoral');
-        console.log('current time');
-    }
-    else if (currentTime > 12) {
-        $('#twelve-pm').css('background-color', 'grey');
-        console.log('already passed');
-    }
-    else if (currentTime < 12) {
-        $('#twelve-pm').css('background-color', 'lightgreen');
-        console.log('coming up');
-    }
-    // 1pm
-    if (currentTime === 13) {
-        $('#one-pm').css('background-color', 'lightcoral');
-        console.log('current time');
-    }
-    else if (currentTime > 13) {
-        $('#one-pm').css('background-color', 'grey');
-        console.log('already passed');
-    }
-    else if (currentTime < 13) {
-        $('#one-pm').css('background-color', 'lightgreen');
-        console.log('coming up');
-    }
-    // 2pm
-    if (currentTime === 14) {
-        $('#two-pm').css('background-color', 'lightcoral');
-        console.log('current time');
-    }
-    else if (currentTime > 14) {
-        $('#two-pm').css('background-color', 'grey');
-        console.log('already passed');
-    }
-    else if (currentTime < 14) {
-        $('#two-pm').css('background-color', 'lightgreen');
-        console.log('coming up');
-    }
-    // 3pm
-    if (currentTime === 15) {
-        $('#three-pm').css('background-color', 'lightcoral');
-        console.log('current time');
-    }
-    else if (currentTime > 15) {
-        $('#three-pm').css('background-color', 'grey');
-        console.log('already passed');
-    }
-    else if (currentTime < 15) {
-        $('#three-pm').css('background-color', 'lightgreen');
-        console.log('coming up');
-    }
-    // 4pm
-    if (currentTime === 16) {
-        $('#four-pm').css('background-color', 'lightcoral');
-        console.log('current time');
-    }
-    else if (currentTime > 16) {
-        $('#four-pm').css('background-color', 'grey');
-        console.log('already passed');
-    }
-    else if (currentTime < 16) {
-        $('#four-pm').css('background-color', 'lightgreen');
-        console.log('coming up');
-    }
-    // 5pm
-    if (currentTime === 17) {
-        $('#five-pm').css('background-color', 'lightcoral');
-        console.log('current time');
-    }
-    else if (currentTime > 17) {
-        $('#five-pm').css('background-color', 'grey');
-        console.log('already passed');
-    }
-    else if (currentTime < 17) {
-        $('#five-pm').css('background-color', 'lightgreen');
+    else if (currentTime < elem) {
+        dom.css('background-color', 'lightgreen');
         console.log('coming up');
     }
 }
 
-checkCurrentTime();
 
 
